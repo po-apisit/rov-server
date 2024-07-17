@@ -16,19 +16,19 @@ export class HeroService {
   }
 
   async findAll() : Promise<Hero[]> {
-    return await this.heroModel.find().populate("skills").exec();
+    return await this.heroModel.find({ public:"public" }).exec();
   }
 
-  async findcategory(category: string) : Promise<Hero[]> {
-    return await this.heroModel.find({ categoryId: category }).populate("skills").exec();
+  async findAllAdmin() : Promise<Hero[]> {
+    return await this.heroModel.find().exec();
   }
 
   async findOne(id: string) : Promise<Hero> {
-    return await this.heroModel.findById(id).populate("skills").exec();
+    return await this.heroModel.findById(id).exec();
   }
 
   async update(id: string, updateHeroDto: UpdateHeroDto) : Promise<Hero> {
-    return await this.heroModel.findByIdAndUpdate(id, updateHeroDto).populate("skills").exec();
+    return await this.heroModel.findByIdAndUpdate(id, updateHeroDto).exec();
   }
 
   async remove(id: string) : Promise<string> {

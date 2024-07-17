@@ -12,34 +12,32 @@ export class CreateHeroDto {
 
     @IsString()
     @IsOptional()
-    image: string;
-
-    @IsString()
-    @IsOptional()
-    image_cover: string;
-
-    @IsString()
-    @IsOptional()
     description: string;
 
     @IsString()
     @IsOptional()
     story: string;
 
+    @IsString()
+    @IsOptional()
+    image: string;
+
+    @IsString()
+    @IsOptional()
+    image_cover: string;
+
     @IsMongoId()
     @IsOptional()
     categoryId: string;
 
     @IsOptional()
-    skills: Types.ObjectId[];
+    skills: string[];
 
     @IsMongoId()
     @IsOptional()
     itemsId: string[];
 
-    @IsDate()
-    createdAt: Date;
-
-    @IsDate()
-    updatedAt: Date;
+    @IsString()
+    @IsNotEmpty()
+    public: "private" | "public";
 }

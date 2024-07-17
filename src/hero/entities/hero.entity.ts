@@ -23,11 +23,14 @@ export class Hero {
     @Prop({ required: false })
     story: string;
 
+    @Prop({ required: true })
+    public: "private" | "public";
+
     @Prop({ required: false })
     categoryId: string;
 
-    @Prop({ type: [{ type: Types.ObjectId, ref: 'Skill' }], default: [] })
-    skills: Types.ObjectId[];
+    @Prop({ default: [] })
+    skills: string[];
 
     @Prop({ default: [] })
     itemsId: string[];

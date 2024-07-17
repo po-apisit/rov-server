@@ -9,11 +9,4 @@ export class CreateCategoryDto {
     @IsOptional()
     description: string;
 
-    @IsOptional()
-    @IsDate()
-    createdAt: Date;
-
-    @IsOptional()
-    @IsDate()
-    updatedAt: Date;
 }
