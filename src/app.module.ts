@@ -7,6 +7,7 @@ import { RuneModule } from './rune/rune.module';
 import { SpellModule } from './spell/spell.module';
 import { CategoryModule } from './category/category.module';
 import { CategoryItemModule } from './category-item/category-item.module';
+import { SkillModule } from './skill/skill.module';
 
 @Module({
   imports: [
@@ -20,7 +21,8 @@ import { CategoryItemModule } from './category-item/category-item.module';
     RuneModule,
     SpellModule,
     CategoryModule,
-    CategoryItemModule
+    CategoryItemModule,
+    SkillModule
   ],
   controllers: [],
   providers: [],

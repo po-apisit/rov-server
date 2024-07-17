@@ -15,6 +15,9 @@ export class Hero {
     image: string;
 
     @Prop({ required: false })
+    image_cover: string;
+
+    @Prop({ required: false })
     description: string;
 
     @Prop({ required: false })
@@ -23,7 +26,7 @@ export class Hero {
     @Prop({ required: false })
     categoryId: string;
 
-    @Prop({ type: [{ type: Types.ObjectId, ref: 'skill' }], default: [] })
+    @Prop({ type: [{ type: Types.ObjectId, ref: 'Skill' }], default: [] })
     skills: Types.ObjectId[];
 
     @Prop({ default: [] })

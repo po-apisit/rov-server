@@ -16,6 +16,10 @@ export class CreateHeroDto {
 
     @IsString()
     @IsOptional()
+    image_cover: string;
+
+    @IsString()
+    @IsOptional()
     description: string;
 
     @IsString()
