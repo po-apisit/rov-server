@@ -18,8 +18,14 @@ export class HeroController {
 
   @Get()
   findAll() {
+    return this.heroService.findAllAdmin();
+  }
+
+  @Get("admin")
+  findAdmin() {
     return this.heroService.findAll();
   }
+
   @Get(':id')
   findOne(@Param('id') id: string) {
     return this.heroService.findOne(id);
